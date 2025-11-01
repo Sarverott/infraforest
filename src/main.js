@@ -26,6 +26,10 @@ infraforest_devtool.context.desktop = exec("npm exec task run_desktop", {
 	cwd: path.join(fileURLToPath(import.meta.url), "..", ".."),
 }, resultPrinter);
 
+infraforest_devtool.context.desktop.on("message", resultPrinter)
+infraforest_devtool.context.interface.on("message", resultPrinter)
+infraforest_devtool.context.serviceChain.on("message", resultPrinter)
+
 infraforest_devtool.on("exit", () => {
 	setInterval(()=>{
 		console.log('killing subprecesses');
