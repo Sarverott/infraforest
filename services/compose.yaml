@@ -12,3 +12,4 @@ include:
   - ./dnsmasq/compose.yaml
   # - ./qbittorrent/compose.yaml
   - ./adminer/compose.yaml
+  #- ./dockge/compose.yaml

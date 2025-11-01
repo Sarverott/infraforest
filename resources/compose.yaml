@@ -1,4 +1,10 @@
 volumes:
+  dockge_dir:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./dockge_dir/
   mysql_dir:
     driver: local
     driver_opts:
