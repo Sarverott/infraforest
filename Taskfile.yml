@@ -8,5 +8,20 @@ vars:
 tasks:
   default:
     cmds:
+      - npm start
+    silent: false
+  lounch_services:
+    cmds:
       - docker compose up --force-recreate
     silent: false
+  run_interface:
+    cmds:
+      - npm run dev
+    dir: ./apps/infraforest-interface/
+    silent: false
+  run_desktop:
+    cmds:
+      - npm start
+    dir: ./apps/infraforest-desktop/
+    silent: false
+  

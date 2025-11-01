@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "Apokryf's infrastructural setup",
   "main": "src/main.js",
+  "type": "module",
   "scripts": {
-    "test": "task",
-    "prepare": "husky"
+    "test": "task test",
+    "start": "node ./src/main.js",
+    "prepare": "husky",
+    "format": "biome check --write",
+    "migrate": "biome migrate --write"
   },
   "repository": {
     "type": "git",
